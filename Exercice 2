@@ -1,0 +1,18 @@
+let nombreSecret = Math.floor(Math.random() * 10) + 1;
+let tentative;
+let compteur = 0;
+
+do {
+    tentative = parseInt(prompt("Entrer un nombre entre 1 et 10 :"));
+    compteur++;
+
+    if (tentative > nombreSecret) {
+        console.log("Trop grand");
+    } else if (tentative < nombreSecret) {
+        console.log("Trop petit");
+    } else {
+        console.log("Bravo !");
+        console.log("Nombre de tentatives =", compteur);
+    }
+
+} while (tentative != nombreSecret);
